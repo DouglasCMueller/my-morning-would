@@ -1,24 +1,33 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import LoginForm from './components/LoginForm/LoginForm'
+import Nav from './components/Nav/Nav'
+import NewUserForm from './components/NewUser/NewUser';
+import Header from './components/Header/Header';
+import Timer from './components/Timer/Timer'
+import Date from './components/DateShown/DateShown'
+import Events from './components/Events/Events'
+import Todos from './components/Todos/Todos'
+import styles from './app.css'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <Nav />
+     <div className="ui headerDiv">
+     <Header>   
+     </Header>
+     </div>
+     <div>
+     <Timer />
+      <Date />
+       
+     </div>
+    <Events />
+     <Todos />
+   <div>
+      <LoginForm />
+   <NewUserForm />
+</div>
     </div>
   );
 }
